@@ -8,93 +8,166 @@
     <title>Blog Dance</title>
 
     <style>
-        header {
-            background-color: #ab0468;
-            color: #FFFFFF;
-            text-align: center;
-            header {
-            width: 100%;
-            margin: 0;
-            padding: 30px;
-            box-sizing: border-box;
-}
-        }
 
-        main {
-            background-color: #FFFFFF;
-            color: #ab0468;
-            main {
-            width: 100%;
-            max-width: none;
-            margin: 0;
-            padding: 30px 5%;
-            box-sizing: border-box;
-}
-}
-        }
-
+        /* Estilo geral da página */
         body {
             margin: 0;
             padding: 0;
             width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fff7fb;
+            color: #5e1742;
         }
 
-        img {
-            width: 80px;
-            height: 80px;
+        /* Cabeçalho */
+        header {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background-color: #ab0468;
+            color: #ffffff;
+            text-align: center;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        /* Conteúdo principal */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-sizing: border-box;
+        }
+
+        /* Postagens */
         article {
             display: flex;
             align-items: flex-start;
             gap: 20px;
-            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(171, 4, 104, 0.15);
         }
 
-        article div {
+        /* Imagens */
+        article img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        /* Conteúdo do post */
+        .conteudo-post {
+            flex: 1;
             text-align: left;
+        }
+
+        h2 {
+            color: #ab0468;
+            margin-top: 0;
         }
 
         .artigo-autor {
             font-weight: bold;
         }
 
+        /* Botões */
         button {
             margin-right: 5px;
+            padding: 7px 12px;
             cursor: pointer;
+            background-color: #ffffff;
+            border: 1px solid #d8a4c3;
+            border-radius: 6px;
         }
+
+        button:hover {
+            background-color: #ffe6f3;
+        }
+
+        /* Seção do vídeo */
+        .secao-video {
+            background-color: #fde5f1;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(171, 4, 104, 0.15);
+            text-align: center;
+        }
+
+        .secao-video video {
+            width: 100%;
+            max-width: 700px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        /* Informações */
+        .informacoes {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(171, 4, 104, 0.15);
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ab0468;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Responsividade */
         @media (max-width: 600px) {
-    main {
-        width: 95%;
-    }
+            main {
+                width: 92%;
+            }
 
-    header {
-        width: 95%;
-        padding: 20px;
-    }
+            article {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .post {
-        flex-direction: column;
-    }
-}
+            .conteudo-post {
+                text-align: center;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
+    <!-- Cabeçalho -->
     <header>
         <h1>Blog Dance</h1>
-        <p>Um lugar de compartilhar dicas sobre dança!</p>
+        <p>Um lugar para compartilhar dicas sobre dança!</p>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
 
+        <!-- Primeiro artigo -->
         <article>
 
-            <img src="imagem.bailarina.png"
-                alt="Desenho de uma bailarina com tutu rosa, coque e sapatilhas de ponta.">
+            <img
+                src="imagem.bailarina.png"
+                alt="Desenho de uma bailarina com tutu rosa."
+            >
 
-            <div>
+            <div class="conteudo-post">
+
                 <h2>Meu primeiro post</h2>
 
                 <p class="artigo-autor">
@@ -102,22 +175,32 @@
                 </p>
 
                 <p>
-                    Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas
-                    sobre dança e curiosidades desse universo.
+                    Boas-vindas ao meu novo blog! Aqui vou compartilhar
+                    dicas sobre dança e curiosidades desse universo.
+                </p>
+
+                <p>
+                    A dança é uma forma de expressão que une
+                    movimento, música, dedicação e emoção.
                 </p>
 
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
+
             </div>
 
         </article>
 
+        <!-- Segundo artigo -->
         <article>
 
-            <img src="imagem.bailarina.png"
-                alt="Desenho de uma bailarina com tutu rosa, coque e sapatilhas de ponta.">
+            <img
+                src="imagem.sapatilhas.png"
+                alt="Imagem relacionada ao ballet."
+            >
 
-            <div>
+            <div class="conteudo-post">
+
                 <h2>Meu segundo post</h2>
 
                 <p class="artigo-autor">
@@ -125,22 +208,78 @@
                 </p>
 
                 <p>
-                    Aqui vou compartilhar mais conteúdos, dicas e curiosidades
-                    sobre o mundo da dança.
+                    Aqui vou compartilhar mais conteúdos,
+                    dicas e curiosidades sobre o mundo da dança.
+                </p>
+
+                <p>
+                    Existem diferentes estilos de dança,
+                    e cada um possui características e movimentos
+                    que o tornam especial.
                 </p>
 
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
+
             </div>
 
         </article>
 
+        <!-- Vídeo -->
+        <section class="secao-video">
+
+            <h2>Vídeo sobre dança</h2>
+
+            <p>
+                Assista a este vídeo para conhecer um pouco
+                mais sobre o universo da dança.
+            </p>
+
+            <video controls>
+
+                <source
+                    src="video.danca.mp4"
+                    type="video/mp4"
+                >
+
+                Seu navegador não suporta vídeos.
+
+            </video>
+
+        </section>
+
+        <!-- Informações sobre dança -->
+        <div class="informacoes">
+
+            <h2>Sobre a dança</h2>
+
+            <p>
+                A dança é uma forma de expressão artística
+                que utiliza os movimentos do corpo para
+                transmitir sentimentos, histórias e ideias.
+            </p>
+
+            <p>
+                Além de ser uma atividade artística,
+                ela também envolve disciplina, dedicação,
+                criatividade e prática.
+            </p>
+
+        </div>
+
     </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2026 Blog Dance • Criado por Rayssa Medeiros</p>
+    </footer>
 
     <script>
 
+        // Seleciona todos os botões
         let botoes = document.querySelectorAll("button");
 
+        // Adiciona o clique em cada botão
         botoes.forEach(function (botao) {
 
             let curtiu = false;
