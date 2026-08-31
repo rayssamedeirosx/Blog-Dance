@@ -8,6 +8,17 @@
     <title>Blog Dance</title>
 
     <style>
+
+        /* Estilo geral da página */
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: Georgia, serif;
+            background-color: #fff7fb;
+        }
+
+        /* Cabeçalho */
         header {
             background-color: #ab0468;
             color: #FFFFFF;
@@ -16,105 +27,149 @@
             margin: 0;
             padding: 30px;
             box-sizing: border-box;
-}
-        
-
-        main {
-            background-color: #FFFFFF;
-            color: #ab0468;
-            width: 100%;
-            max-width: none;
-            margin: 0;
-            padding: 30px 5%;
-            box-sizing: border-box;
-}
-
-        
-
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
         }
 
-        img {
+        header h1 {
+            margin: 0;
+        }
+
+        /* Conteúdo principal */
+        main {
+            background-color: #fff7fb;
+            color: #ab0468;
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Posts */
+        article {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 35px;
+            padding: 25px;
+            background-color: #FFFFFF;
+            border: 1px solid #f0c9df;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #dddddd;
+        }
+
+        /* Imagens dos posts */
+        article img {
             width: 80px;
             height: 80px;
+            object-fit: cover;
         }
 
-        article {
-             display: flex;
-             align-items: flex-start;
-             gap: 20px;
-             margin-top: 30px;
-             padding: 20px;
-             background-color: #FFFFFF;
-             border-radius: 10px;
-             box-shadow: 0 2px 8px #dddddd;
-}
-     
-
+        /* Conteúdo dos posts */
         .conteudo-post {
-    text-align: left;
-}
+            flex: 1;
+            text-align: left;
+        }
 
-            /* Seção sobre dança */
-            section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #ffeaf5;
-            border-radius: 10px;
-            text-align: center;
-}
+        /* Títulos */
+        h2 {
+            color: #ab0468;
+            font-family: Georgia, serif;
+            margin-top: 0;
+        }
 
+        /* Nome da autora */
         .artigo-autor {
             font-weight: bold;
         }
 
+        /* Botões */
         button {
             margin-right: 5px;
+            padding: 7px 12px;
             cursor: pointer;
+            background-color: #FFFFFF;
+            border: 1px solid #d8a4c3;
+            border-radius: 6px;
         }
+
+        button:hover {
+            background-color: #ffe6f3;
+        }
+
+        /* Seção sobre dança */
+        section {
+            width: 100%;
+            margin: 35px auto;
+            padding: 25px;
+            background-color: #ffeaf5;
+            border-radius: 12px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Vídeo */
+        section iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Responsividade */
         @media (max-width: 600px) {
-    main {
-        width: 100%;
-        padding: 20px;
-    }
 
-    header {
-        width: 100%;
-        padding: 20px;
-    }
+            main {
+                width: 95%;
+                padding: 15px;
+            }
 
-    article {
-        flex-direction: column;
-    }
+            header {
+                width: 100%;
+                padding: 20px;
+            }
 
-    video,
-    iframe {
-        max-width: 100%;
-    }
-}
+            article {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .conteudo-post {
+                text-align: center;
+            }
+
+            section iframe {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
+    <!-- Cabeçalho -->
     <header>
+
         <h1>Blog Dance</h1>
-        <p>Um lugar de compartilhar dicas sobre dança!</p>
+
+        <p>
+            Um lugar de compartilhar dicas sobre dança!
+        </p>
+
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
 
+        <!-- Primeiro post -->
         <article>
 
             <img src="imagem.bailarina.png"
                 alt="Desenho de uma bailarina com tutu rosa, coque e sapatilhas de ponta.">
 
             <div class="conteudo-post">
+
                 <h2>Meu primeiro post</h2>
 
                 <p class="artigo-autor">
@@ -122,23 +177,25 @@
                 </p>
 
                 <p>
-                    Sejam bem-vindos ao meu novo blog! Aqui vou compartilhar dicas
-                    sobre dança, cuidados, rotinas e curiosidades desse universo.
+                    Sejam bem-vindos ao meu novo blog! Aqui vou compartilhar
+                    dicas sobre dança, cuidados, rotinas e curiosidades desse universo.
                 </p>
 
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
+
             </div>
 
         </article>
 
+        <!-- Segundo post -->
         <article>
 
-            <img src="imagem 2.png"
-                alt="Desenho de de uma bailarina com alimentos saudáveis e garrafa de água.
-">
+            <img src="imagem.sapatilhas.png"
+                alt="Desenho relacionado à alimentação saudável de uma bailarina.">
 
             <div class="conteudo-post">
+
                 <h2>Alimentação saudável!</h2>
 
                 <p class="artigo-autor">
@@ -146,41 +203,54 @@
                 </p>
 
                 <p>
-                    Uma alimentação saudável é essencial para as bailarinas, pois fornece energia para os treinos, ajuda na recuperação muscular e contribui para a saúde e o bom desempenho na dança.
+                    Uma alimentação saudável é essencial para as bailarinas,
+                    pois fornece energia para os treinos, ajuda na recuperação
+                    muscular e contribui para a saúde e o bom desempenho na dança.
                 </p>
 
                 <button>❤️ <span>0</span></button>
                 <button>👍 <span>0</span></button>
+
             </div>
 
         </article>
 
         <!-- Seção sobre dança -->
-<section>
-    <h2>Sobre a dança</h2>
+        <section>
 
-    <p>
-        A dança é uma forma de expressão artística que combina
-        movimentos, música, técnica e criatividade.
-    </p>
-    <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/iaLfZUe0YUM?si=FycLndJwREWqWOKy&amp;controls=0&amp;start=18" 
-    title="Vídeo da Bailarina Luciana Sagioro, primeira bailarina da Opéra de Paris" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-    </iframe>
-</section>
+            <h2>Sobre a dança</h2>
+
+            <p>
+                A dança é uma forma de expressão artística que combina
+                movimentos, música, técnica e criatividade.
+            </p>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/iaLfZUe0YUM?si=FycLndJwREWqWOKy&amp;controls=0&amp;start=18"
+                title="Vídeo sobre dança"
+                allowfullscreen>
+            </iframe>
+
+            <p>
+                O vídeo apresenta uma apresentação de ballet e permite observar
+                a técnica, a expressão e a dedicação presentes na dança.
+                Por meio dos movimentos e da interpretação, é possível perceber
+                como a bailarina utiliza o corpo e a música para transmitir
+                emoções durante a apresentação.
+            </p>
+
+        </section>
 
     </main>
 
     <script>
 
+        // Seleciona todos os botões
         let botoes = document.querySelectorAll("button");
 
+        // Adiciona o clique em cada botão
         botoes.forEach(function (botao) {
 
             let curtiu = false;
