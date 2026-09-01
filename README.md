@@ -14,6 +14,6 @@ Para a construção do blog foram utilizados HTML, CSS e JavaScript. O HTML orga
 
 A escolha do tema, os textos, a organização das postagens e a personalização do site foram desenvolvidos para a realização deste projeto.
 
-**Autora: Rayssa Medeiros**
+**Autora: Rayssa Barbosa de Medeiros**
 
 As imagens foram criadas com o auxílio de IA e o vídeo adicionado ao site foi: ''Luciana SAGIORO, 112 – Prix de Lausanne 2022'' do canal Prix de Lausanne.
